@@ -8,8 +8,8 @@ if __name__ == '__main__':
 
     try:
         if len(sys.argv) > 1:
-            print('Running on server mode')
             if sys.argv[1]  == '--server' or sys.argv[1] == '-s': 
+                print('Running on server mode')
                 if len(sys.argv) == 3:
                     print(f'Using port {sys.argv[2]}')
                     server( int( sys.argv[2] ) )
