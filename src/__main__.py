@@ -5,16 +5,18 @@ from Server import server
 if __name__ == '__main__':
     import sys
 
-    def arg(index):
-        if len(sys.argv) - 1 > index:
-            return sys.argv[index]
-
     try:
-        if arg(1):
-            if arg(1) == '--server':
-                server(arg(2))
+        if len(sys.argv) > 1:
+            print('Running on server mode')
+            if sys.argv[1]  == '--server' or sys.argv[1] == '-s': 
+                if len(sys.argv) == 3:
+                    print(f'Using port {sys.argv[2]}')
+                    server( int( sys.argv[2] ) )
+                else: 
+                    print('Using default port')
+                    server( )
             else:
-                Tui().look_for(arg(1))
+                Tui().look_for( sys.argv[1] )
         else:
             tui = Tui()
             tui.separate()

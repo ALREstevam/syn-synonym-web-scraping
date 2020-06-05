@@ -27,7 +27,5 @@ def server(port=5000):
     def dictionary(word):
         return jsonify(scrap.dictionary(word))
 
-    if __name__ == '__main__':
-        app.run(host='127.0.0.1', port=port, debug=True)
+    app.run(host='127.0.0.1', port=port, debug=True)
 
-server(5000)
