@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env python
 
 from TUI import Tui
 from Server import server
