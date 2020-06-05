@@ -1,3 +1,4 @@
+#!/bin/sh
 
 from TUI import Tui
 from Server import server
